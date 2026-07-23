@@ -4,7 +4,7 @@ import { colors } from "../utils/colors";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const links = ["What it does", "For candidates", "For admins", "How it works"];
+  const links = ["What it does", "For candidates", "For hrs", "How it works"];
 
   return (
     <header
