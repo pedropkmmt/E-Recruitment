@@ -3,10 +3,10 @@ import { FileText, Send, Users, CalendarCheck } from "lucide-react";
 import {colors } from "../utils/colors";
 
 const STEPS = [
-  { icon: FileText, title: "Admin posts a job", text: "The role goes live and becomes visible to all candidates." },
-  { icon: Send, title: "Candidates apply", text: "Applications appear in the admin's list as they come in." },
-  { icon: Users, title: "Admin reviews applicants", text: "Each candidate's application is reviewed on the platform." },
-  { icon: CalendarCheck, title: "Interview decision", text: "The admin accepts the candidate for an interview or rejects the application." },
+  { icon: FileText, title: "HR posts a job", text: "The role goes live and becomes visible to all candidates." },
+  { icon: Send, title: "Candidates apply", text: "Applications appear in the hr's list as they come in." },
+  { icon: Users, title: "HR reviews applicants", text: "Each candidate's application is reviewed on the platform." },
+  { icon: CalendarCheck, title: "Interview decision", text: "The hr accepts the candidate for an interview or rejects the application." },
 ];
 
 const HowItWorks = () => (

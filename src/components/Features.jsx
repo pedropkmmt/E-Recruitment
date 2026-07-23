@@ -4,7 +4,7 @@ import { colors} from "../utils/colors";
 
 const FEATURES = [
   {
-    heading: "For candidates",
+    heading: "For Candidates",
     items: [
       { icon: Search, title: "Browse open jobs", text: "See every role posted by the company, with full descriptions and requirements." },
       { icon: Send, title: "Apply online", text: "Submit your application and CV directly through the platform " },
@@ -12,7 +12,7 @@ const FEATURES = [
     ],
   },
   {
-    heading: "For admins",
+    heading: "For HRs",
     items: [
       { icon: ClipboardList, title: "Create and post jobs", text: "Write a job, set the details, and publish it so every candidate can see and apply." },
       { icon: Users, title: "View applicants", text: "See the full list of candidates who applied to each job, with their details in one view." },

@@ -14,7 +14,7 @@ const Footer = () => (
         </span>
       </div>
       <div className="flex gap-6">
-        {["Jobs", "Admins", "Contact", "Privacy"].map((l) => (
+        {["Jobs", "HRS", "Contact", "Privacy"].map((l) => (
           <a key={l} href="#" className="font-body text-sm transition-opacity hover:opacity-70" style={{ color: colors.muted }}>
             {l}
           </a>

@@ -22,13 +22,6 @@ const CTA = () => (
         >
           Create free account
         </a>
-        <a
-          href="#"
-          className="rounded-md border px-6 py-3 font-body text-sm font-semibold text-white"
-          style={{ borderColor: "#33507F" }}
-        >
-          Admin sign in
-        </a>
       </div>
     </div>
   </section>
