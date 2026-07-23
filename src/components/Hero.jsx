@@ -14,8 +14,8 @@ const Hero = () => (
           Hiring, handled in one place.
         </h1>
         <p className="mt-5 max-w-md font-body text-base leading-relaxed" style={{ color: "#B7C6E2" }}>
-          E-Recruitment connects job seekers and hiring admins. Candidates browse
-          open roles and apply online. Admins create and publish jobs, review every
+          E-Recruitment connects job seekers and comapanies hiring. Candidates browse
+          open roles and apply online. HRS create and publish jobs, review every
           applicant, and accept or reject candidates for interviews.
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
