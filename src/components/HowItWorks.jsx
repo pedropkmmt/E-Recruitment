@@ -1,38 +1,43 @@
 import React from "react";
-import { FileText, Send, Users, CalendarCheck } from "lucide-react";
-import {colors } from "../utils/colors";
+import { colors } from "../utils/colors";
 
 const STEPS = [
-  { icon: FileText, title: "HR posts a job", text: "The role goes live and becomes visible to all candidates." },
-  { icon: Send, title: "Candidates apply", text: "Applications appear in the hr's list as they come in." },
-  { icon: Users, title: "HR reviews applicants", text: "Each candidate's application is reviewed on the platform." },
-  { icon: CalendarCheck, title: "Interview decision", text: "The hr accepts the candidate for an interview or rejects the application." },
+  { n: "01", title: "HR posts a job", text: "The role goes live and becomes visible to every candidate on the platform." },
+  { n: "02", title: "Candidates apply", text: "Applications land in the HR's list the moment they're submitted." },
+  { n: "03", title: "HR reviews applicants", text: "Each application is opened and reviewed side by side in one view." },
+  { n: "04", title: "A decision is made", text: "The candidate is moved forward to an interview, or the application is declined." },
 ];
 
 const HowItWorks = () => (
-  <section className="border-y py-14 sm:py-20" style={{ background: colors.sky, borderColor: colors.line }}>
+  <section id="how" className="py-16 sm:py-24" style={{ background: colors.ink }}>
     <div className="mx-auto max-w-6xl px-4 sm:px-6">
-      <h2 className="text-center font-display text-2xl font-semibold sm:text-3xl lg:text-4xl" style={{ color: colors.navy }}>
-        How it works
-      </h2>
-      <div className="mt-10 grid gap-8 sm:mt-12 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mb-14 max-w-2xl">
+        <p className="font-mono text-[11px] uppercase tracking-label" style={{ color: colors.mutedInk }}>
+          The journey
+        </p>
+        <h2 className="mt-3 font-display text-3xl font-bold leading-tight text-white sm:text-4xl">
+          One clear path, from post to offer.
+        </h2>
+      </div>
+
+      <div className="relative grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+        <div
+          className="absolute left-0 right-0 top-4 hidden h-px lg:block"
+          style={{ backgroundImage: `repeating-linear-gradient(90deg, ${colors.lineInk} 0 6px, transparent 6px 14px)` }}
+          aria-hidden
+        />
         {STEPS.map((s, i) => (
-          <div key={s.title}>
+          <div key={s.n} className="relative">
             <div className="flex items-center gap-3">
-              <div
-                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
-                style={{ background: colors.blue }}
+              <span
+                className="relative z-10 flex h-8 w-8 items-center justify-center rounded-full font-mono text-[11px] font-bold text-white"
+                style={{ background: i === STEPS.length - 1 ? colors.mint : colors.iris }}
               >
-                <s.icon size={18} color="#fff" />
-              </div>
-              <span className="font-body text-xs font-semibold" style={{ color: colors.muted }}>
-                Step {i + 1}
+                {s.n}
               </span>
             </div>
-            <h3 className="mt-4 font-display text-base font-semibold" style={{ color: colors.navy }}>
-              {s.title}
-            </h3>
-            <p className="mt-2 font-body text-sm leading-relaxed" style={{ color: colors.muted }}>
+            <h3 className="mt-5 font-display text-lg font-bold text-white">{s.title}</h3>
+            <p className="mt-2 font-body text-sm leading-relaxed" style={{ color: colors.mutedInk }}>
               {s.text}
             </p>
           </div>
