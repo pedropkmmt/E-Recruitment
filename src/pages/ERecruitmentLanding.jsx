@@ -1,5 +1,5 @@
 import React from "react";
-import { colors} from "../utils/colors";
+import { colors } from "../utils/colors";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Features from "../components/Features";
@@ -9,7 +9,7 @@ import Footer from "../components/Footer";
 
 export default function ERecruitmentLanding() {
   return (
-    <div className="font-body" style={{ background: colors.card }}>
+    <div className="font-body" style={{ background: colors.paper }}>
       <Navbar />
       <main>
         <Hero />

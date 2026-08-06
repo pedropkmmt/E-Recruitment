@@ -1,12 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap');
 @import "tailwindcss";
-    .font-display { font-family: 'Sora', sans-serif; }
-    .font-body { font-family: 'Inter', sans-serif; }
-    @keyframes cardIn {
-      from { opacity: 0; transform: translateY(10px) scale(0.98); }
-      to { opacity: 1; transform: translateY(0) scale(1); }
-    }
-    .card-in { animation: cardIn .45s ease both; }
-    @media (prefers-reduced-motion: reduce) {
-      .card-in { animation: none; }
-    }
+
+:root {
+  --ink: #151421;
+  --paper: #F4F4F2;
+  --iris: #5A3BF2;
+  --iris-deep: #3B22C9;
+  --line: #E7E6EC;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--paper); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+/* Type roles */
+.font-display { font-family: 'Bricolage Grotesque', system-ui, sans-serif; letter-spacing: -0.02em; }
+.font-body    { font-family: 'Inter', system-ui, sans-serif; }
+.font-mono    { font-family: 'Space Mono', ui-monospace, monospace; }
+
+.tracking-label { letter-spacing: 0.24em; }
+
+/* Focus visibility */
+:focus-visible { outline: 2px solid var(--iris); outline-offset: 3px; border-radius: 4px; }
+
+/* Signature motion: the hiring track */
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(8px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.card-in { animation: cardIn .5s cubic-bezier(.2,.7,.2,1) both; }
+
+@keyframes livePulse {
+  0%   { box-shadow: 0 0 0 0 rgba(18,185,129,.55); }
+  70%  { box-shadow: 0 0 0 7px rgba(18,185,129,0); }
+  100% { box-shadow: 0 0 0 0 rgba(18,185,129,0); }
+}
+.live-dot { animation: livePulse 2.2s ease-out infinite; }
+
+@keyframes railFlow {
+  from { background-position: 0 0; }
+  to   { background-position: 28px 0; }
+}
+.rail-flow { animation: railFlow 1.1s linear infinite; }
+
+@keyframes floatY {
+  0%,100% { transform: translateY(0); }
+  50%     { transform: translateY(-6px); }
+}
+.float-y { animation: floatY 6s ease-in-out infinite; }
+
+/*  ambient glow used behind the hero track */
+.iris-glow { background: radial-gradient(60% 60% at 70% 30%, rgba(90,59,242,.18), transparent 70%); }
+
+@media (prefers-reduced-motion: reduce) {
+  .card-in, .live-dot, .rail-flow, .float-y { animation: none !important; }
+  html { scroll-behavior: auto; }
+}
