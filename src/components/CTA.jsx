@@ -1,27 +1,46 @@
 import React from "react";
-import {colors } from "../utils/colors";
+import { ArrowRight } from "lucide-react";
+import { colors } from "../utils/colors";
 
 const CTA = () => (
-  <section className="px-4 py-14 sm:px-6 sm:py-20" style={{ background: colors.card }}>
+  <section id="cta" className="px-4 py-16 sm:px-6 sm:py-24" style={{ background: colors.paper }}>
     <div
-      className="mx-auto max-w-6xl rounded-2xl px-5 py-10 text-center sm:px-6 sm:py-14"
-      style={{ background: colors.navy }}
+      className="relative mx-auto max-w-5xl overflow-hidden rounded-[28px] px-6 py-14 text-center sm:px-10 sm:py-20"
+      style={{ background: `linear-gradient(135deg, ${colors.iris}, ${colors.irisDeep})` }}
     >
-      <h2 className="font-display text-2xl font-semibold text-white sm:text-3xl lg:text-4xl">
-        Start hiring — or get hired
-      </h2>
-      <p className="mx-auto mt-3 max-w-md font-body text-sm" style={{ color: "#B7C6E2" }}>
-        Create a free account to apply for jobs, or sign in as an admin to post
-        your first role.
-      </p>
-      <div className="mx-auto mt-7 flex max-w-md flex-col justify-center gap-3 sm:max-w-none sm:flex-row">
-        <a
-          href="#"
-          className="rounded-md px-6 py-3 font-body text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
-          style={{ background: colors.blue }}
-        >
-          Create free account
-        </a>
+      <div
+        className="pointer-events-none absolute inset-0 opacity-20"
+        style={{
+          backgroundImage: `repeating-linear-gradient(90deg, rgba(255,255,255,.6) 0 2px, transparent 2px 26px)`,
+          maskImage: "radial-gradient(60% 60% at 50% 50%, black, transparent)",
+          WebkitMaskImage: "radial-gradient(60% 60% at 50% 50%, black, transparent)",
+        }}
+        aria-hidden
+      />
+      <div className="relative">
+        <h2 className="mx-auto max-w-2xl font-display text-3xl font-bold leading-tight text-white sm:text-5xl">
+          Start hiringor get hired.
+        </h2>
+        <p className="mx-auto mt-4 max-w-md font-body text-[15px]" style={{ color: "rgba(255,255,255,.82)" }}>
+          Create a free account to apply for roles, or sign in as HR to post your
+          first job and start reviewing candidates today.
+        </p>
+        <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+          <a
+            href="#"
+            className="flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 font-body text-sm font-semibold transition-transform hover:-translate-y-0.5"
+            style={{ color: colors.iris }}
+          >
+            Create free account <ArrowRight size={16} />
+          </a>
+          <a
+            href="#"
+            className="flex items-center justify-center rounded-full px-6 py-3.5 font-body text-sm font-semibold text-white transition-colors hover:bg-white/10"
+            style={{ border: "1px solid rgba(255,255,255,.45)" }}
+          >
+            Post a job as HR
+          </a>
+        </div>
       </div>
     </div>
   </section>
