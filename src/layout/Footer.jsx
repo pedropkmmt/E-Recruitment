@@ -45,7 +45,7 @@ const Footer = () => (
 
       <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t pt-6 sm:flex-row" style={{ borderColor: colors.line }}>
         <p className="font-mono text-[11px]" style={{ color: colors.muted }}>
-          © {new Date().getFullYear()} E-Recruitment platform
+          © {new Date().getFullYear()} Bespoke Solutech 
         </p>
         <p className="font-mono text-[11px]" style={{ color: colors.muted }}>Built for candidates & HR</p>
       </div>
