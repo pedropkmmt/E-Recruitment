@@ -43,9 +43,9 @@ const Footer = () => (
         ))}
       </div>
 
-      <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t pt-6 sm:flex-row" style={{ borderColor: colors.line }}>
-        <p className="font-mono text-[11px]" style={{ color: colors.muted }}>
-          © {new Date().getFullYear()} Bespoke Solutech 
+      <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t pt-6 sm:flex-row" style={{ borderColor: colors.line }}>
+        <p className="flex font-mono text-[11px]" style={{ color: colors.muted }}>
+          © {new Date().getFullYear()} Bespoke Solutechv<a href="https://www.bespokesolutech.co.za/" ><img src="/logo.png" alt="bespoke solutech logo" width={50}/></a>
         </p>
         <p className="font-mono text-[11px]" style={{ color: colors.muted }}>Built for candidates & HR</p>
       </div>
